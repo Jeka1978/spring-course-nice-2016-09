@@ -1,6 +1,7 @@
 package quoters;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Map;

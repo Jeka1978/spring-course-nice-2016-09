@@ -4,40 +4,14 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-   <context:annotation-config/>
+   <context:component-scan base-package="quoters"/>
 
-    <bean class="quoters.bpp.BeanDefinitionAnalyzerBeanFactoryPostProcessor"/>
 
-    <bean class="quoters.bpp.InjectRandomIntAnnotationBeanPostProcessor"/>
-
-    <bean id="anotherQuote" class="java.lang.String">
-        <constructor-arg value="I'll be back"/>
-    </bean>
 
     <context:property-placeholder location="classpath:quotes.properties"/>
 
 
-    <bean id="talkingRobot" class="quoters.TalkingRobotImpl">
-        <property name="quoters">
-            <list>
-                <ref bean="shakespearQuoter"/>
-                <ref bean="terminatorQuoter"/>
-            </list>
-        </property>
 
-    </bean>
-    <bean id="terminatorQuoter" class="quoters.TerminatorQuoter" destroy-method="killAll">
-        <property name="messages">
-            <list>
-                <value>Alstalavista baby</value>
-                <ref bean="anotherQuote"/>
-                <value>Give me your closes and your bycicle</value>
-            </list>
-        </property>
-    </bean>
-    <bean id="shakespearQuoter" class="quoters.ShakespearQuoter">
-        <property name="message" value="${shake}"/>
-    </bean>
 
 
 </beans>
