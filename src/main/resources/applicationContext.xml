@@ -6,11 +6,15 @@
 
    <context:annotation-config/>
 
+    <bean class="quoters.bpp.BeanDefinitionAnalyzerBeanFactoryPostProcessor"/>
+
     <bean class="quoters.bpp.InjectRandomIntAnnotationBeanPostProcessor"/>
 
     <bean id="anotherQuote" class="java.lang.String">
         <constructor-arg value="I'll be back"/>
     </bean>
+
+    <context:property-placeholder location="classpath:quotes.properties"/>
 
 
     <bean id="talkingRobot" class="quoters.TalkingRobotImpl">
@@ -22,7 +26,7 @@
         </property>
 
     </bean>
-    <bean id="terminatorQuoter" class="quoters.TerminatorQuoter">
+    <bean id="terminatorQuoter" class="quoters.TerminatorQuoter" destroy-method="killAll">
         <property name="messages">
             <list>
                 <value>Alstalavista baby</value>
@@ -32,7 +36,7 @@
         </property>
     </bean>
     <bean id="shakespearQuoter" class="quoters.ShakespearQuoter">
-        <property name="message" value="2 b || ! 2 b"/>
+        <property name="message" value="${shake}"/>
     </bean>
 
 
