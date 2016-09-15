@@ -12,6 +12,7 @@ import java.util.List;
  * Created by Jeka on 12/09/2016.
  */
 @Component
+@QuoterType(Genre.FILM)
 public class TerminatorQuoter implements Quoter {
 
     private List<String> messages;

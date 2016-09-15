@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
  */
 @Setter
 @Component
+@QuoterType(Genre.BOOK)
 public class ShakespearQuoter implements Quoter {
     @Value("${shake}")
     private String message;
