@@ -5,14 +5,14 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.*;
 
 /**
  * Created by Jeka on 12/09/2016.
  */
-@RunWith(SpringRunner.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:lab1-context.xml")
 //@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
 public class TaxCalculatorIIntegrationTest {

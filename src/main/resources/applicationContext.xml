@@ -8,6 +8,7 @@
 
 
 
+
     <context:property-placeholder location="classpath:quotes.properties"/>
 
 

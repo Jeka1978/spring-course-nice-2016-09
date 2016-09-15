@@ -6,15 +6,14 @@ import org.springframework.stereotype.Component;
  * Created by Jeka on 15/09/2016.
  */
 @Component
-public class HappyBirthdayMailGenerator implements MailGenerator {
+public class AdvertisemntMailGenerator implements MailGenerator {
     @Override
     public String generateMail() {
-        // 40 lines of code
-        return "<html>happy birthday</html>";
+        return "spring is the best, even better than groovy";
     }
 
     @Override
     public int mailCode() {
-        return 3;
+        return 4;
     }
 }

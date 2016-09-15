@@ -9,6 +9,6 @@ public class DBUtils {
 
     public static int getMailCode() {
         Random random = new Random();
-        return random.nextInt(3) + 1;
+        return random.nextInt(4) + 1;
     }
 }
