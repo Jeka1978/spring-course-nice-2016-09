@@ -12,6 +12,8 @@ import java.util.Map;
  */
 public class Main {
     public static void main(String[] args) {
-        new AnnotationConfigApplicationContext("quoters");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("quoters");
+        context.getBean(TalkingRobot.class).talk();
+        System.out.println("I love Java");
     }
 }

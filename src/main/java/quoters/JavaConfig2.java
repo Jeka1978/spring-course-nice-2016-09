@@ -15,6 +15,7 @@ import javax.annotation.PostConstruct;
 @PropertySource("classpath:quotes.properties")
 @EnableScheduling
 @EnableAsync
+@EnableAspectJAutoProxy
 public class JavaConfig2 {
 
     @Value("${M2_HOME}")

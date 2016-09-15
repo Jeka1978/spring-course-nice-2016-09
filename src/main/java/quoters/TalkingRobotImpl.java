@@ -23,9 +23,11 @@ public class TalkingRobotImpl implements TalkingRobot {
 
 
     @Override
-    @PostConstruct
+//    @PostConstruct
+    @Benchmark
     public void talk() {
        quoters.forEach(Quoter::sayQuote);
+        throw new RuntimeException("bdlfbasdlbfda");
     }
 
 }
