@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 @Profile("JAPAN")
+//@Prod
 public class JapanBeerDao implements BeerDao {
     @Override
     public Beer getBeer() {
